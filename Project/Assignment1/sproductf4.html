@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/hawaiian-shirt.png" type="image/png" />
+    <title>H.Spot | Shirt</title>
+    <style>
+        .search {
+            height: 3rem;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            }
+
+        .search .box {
+            height: 20px;
+            display: flex;
+            cursor: pointer;
+            padding: 20px 3px;
+            background: #fff;
+            border-radius:30px;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0, .3);
+            }
+        .dropbtn {
+          background-color: #04AA6D;
+          border-radius: 25px;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: #3e8e41;
+        }
+        
+        #myInput {
+          box-sizing: border-box;
+          background-image: url('https://www.w3schools.com/howto/searchicon.png');
+          background-position: 14px 12px;
+          background-repeat: no-repeat;
+          font-size: 16px;
+          padding: 14px 20px 12px 45px;
+          border: none;
+          border-bottom: 1px solid #ddd;
+        }
+        
+        #myInput:focus {outline: 3px solid #ddd;}
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f6f6f6;
+          min-width: 230px;
+          overflow: auto;
+          border: 1px solid #ddd;
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown a:hover {background-color: #ddd;}
+        
+        .show {display: block;}
+    </style>
+</head>
+<body>
+   
+    <section id="header">
+        <a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <!--search section starts-->
+                <section class="search">
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"><li><i class="fas fa-search"></i></button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <input type="text" placeholder="Searching..." id="myInput" onkeyup="filterFunction()">
+                          <a href="sproductf1.html">Open Collar Short Sleeve Shirt</a>
+                          <a href="sproductf6.html">Cotton Collar Long Sleeve Shirt</a>
+                          <a href="sproductf7.html">Cotton Wide Pants</a>
+                          <a href="sproductf8.html">Cotton Long Sleeve Blouse</a>
+                          <a href="sproductn1.html">Cotton Stand Collar Long Sleeve</a>
+                          <a href="sproductn5.html">Cotton Collar Long Sleeve Shirt</a>
+                          <a href="sproductn6.html">Chino Shorts</a>
+                          <a href="sproductn8.html">Cotton Stand Collar Short Shirt</a>
+                        </div>
+                      </div>
+                      
+                      <script>
+                      /* When the user clicks on the button,
+                      toggle between hiding and showing the dropdown content */
+                      function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                      }
+                      
+                      function filterFunction() {
+                        var input, filter, ul, li, a, i;
+                        input = document.getElementById("myInput");
+                        filter = input.value.toUpperCase();
+                        div = document.getElementById("myDropdown");
+                        a = div.getElementsByTagName("a");
+                        for (i = 0; i < a.length; i++) {
+                          txtValue = a[i].textContent || a[i].innerText;
+                          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            a[i].style.display = "";
+                          } else {
+                            a[i].style.display = "none";
+                          }
+                        }
+                      }
+                    </script>
+                </section>
+                    <!--search section ends--></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+                <li><a href="payment.html"><i class="fa fa-truck" style="font: size 16px"></i></a></li>
+                <li><a href="Untitled-1.php"><i class="far fa-user-circle" style='font-size:24px'></i></a></li>
+            </ul>
+
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-bars"></i>
+        </div>
+    </section>
+
+    <section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <img id="image" width="100%" alt="">
+      </div>
+
+      <div class="single-pro-details">
+        <h6>Home / Shirt</h6>
+        <h4 id="pro-title"></h4>
+        <h2 id="price">RM0.00</h2>
+        <input type="number" value="1">
+        <button id="add-to-cart-button" class="normal" onclick="addToCartAlert()">Add To Cart</button>
+        <h4>Product Details</h4>
+        <span>
+            Elevate your casual wardrobe with our UrbanEase Open Collar Short Sleeve Shirt—a perfect blend of style and comfort for the modern adventurer. Whether you're strolling through the city streets or embracing the laid-back vibes of a beachside getaway, this shirt is designed to keep you looking effortlessly cool. 
+        </span>
+      </div>
+
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Lot No. 241, Level 2, Suria KLCC, Kuala Lumpur City Centre.</p>
+            <p><strong>Phone:</strong> +60323822828</p>
+            <p><strong>Hours:</strong> 10:00am - 10pm, Mon - Sun</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-youtube-square"></i>
+                    <i class="fab fa-pinterest-square"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+                <p>Secured Payment Gateways</p>
+                <img src="img/pay/pay.png" alt="">
+                
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023, H.Spot</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Call the updateBookDetails function with product-specific information
+        updateDetails(
+            "Open Collar Short Sleeve Shirt",
+            "img/products/f4.jpg",
+            99.00
+        );
+    </script>
+</body>
+</html>
